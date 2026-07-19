@@ -1,35 +1,93 @@
-# 박도현 (Dohyun Park)
+<div align="center">
 
-숭실대학교 AI소프트웨어학부에서 공부하고 있습니다. 리눅스 시스템의 동작을 관찰하고,
-그 기록으로 공격 흐름을 찾아내는 도구를 만드는 데 관심이 있습니다.
+# Dohyun Park
 
-현재 교내 보안 동아리 ASC에서 eBPF 기반 EDR 에이전트를 만들고 있으며, 화이트햇스쿨
-4기 과정을 함께 이수하고 있습니다.
+### Linux Security · eBPF · Detection Engineering
 
-## Projects
+I build security tools that turn low-level system activity into  
+explainable evidence for detection and response.
+
+[![GitHub](https://img.shields.io/badge/GitHub-no--carve--only--pizza-181717?style=flat-square&logo=github)](https://github.com/no-carve-only-pizza)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Dohyun_Park-0A66C2?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/도현-박-6a3035407)
+[![Email](https://img.shields.io/badge/Email-dohyunpkr%40gmail.com-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:dohyunpkr@gmail.com)
+
+</div>
+
+---
+
+## About Me
+
+I'm a second-year AI Software student at Soongsil University, focused on Linux
+security and security product development.
+
+At ASC, my university security club, I lead a four-person team and develop the
+system agent for an eBPF-based Linux EDR project. The project began with a simple
+question after analyzing <code>CVE-2025-55423</code>: beyond reproducing an attack,
+how can we explain what actually happened inside the system?
+
+My goal is to connect process, file, network, and other endpoint events into
+evidence that helps people understand and respond to an attack.
+
+## Focus
+
+| Area | What I work on |
+|---|---|
+| **Linux Security** | System activity, endpoint telemetry, and attack traces |
+| **Detection Engineering** | Behavioral rules, event correlation, and explainable evidence |
+| **Security Product Development** | Collection, detection, validation, deployment, and documentation |
+| **Vulnerability Research** | Reproduction, root-cause analysis, fuzzing, and responsible disclosure |
+
+## Featured Projects
 
 ### [edr-agent](https://github.com/no-carve-only-pizza/edr-agent)
 
-프로세스·파일·네트워크·메모리·DNS·네임스페이스 이벤트를 수집하고 28가지 공격
-패턴을 탐지하는 eBPF 기반 리눅스 EDR 에이전트입니다. ASC 4인 팀에서 팀장과 시스템
-에이전트 개발을 맡았습니다.
+An eBPF-based Linux endpoint security agent that collects process, file, network,
+memory, DNS, and namespace events. It implements 28 behavioral detection rules,
+event correlation, threat-intelligence feeds, anomaly detection, and Unix
+socket-based response.
 
-### [unlicense-arm64](https://github.com/no-carve-only-pizza/unlicense-arm64)
-
-ARM64 환경에서 라이선스 검증 흐름을 분석하기 위한 연구용 포크입니다. 기존 프로젝트를
-바탕으로 아키텍처 차이와 우회 지점을 확인한 작업입니다.
+**Role:** Team lead · System agent development  
+**Stack:** C++ · eBPF/libbpf · CMake · Linux
 
 ### [hanium-aml](https://github.com/no-carve-only-pizza/hanium-aml)
 
-ResNet-50과 FaceNet 기반 얼굴 인증 모델을 대상으로 FGSM, PGD, Square, JSMA, ZOO
-공격을 구현한 한이음 ICT 멘토링 프로젝트입니다. 공격 코드와 방어팀에 전달할 결과 형식
-설계를 담당했습니다.
+Attack-side research for the 2026 Hanium ICT Mentoring project. I implemented
+FGSM, PGD, Square, JSMA, and ZOO attacks against face recognition and verification
+models, and organized the outputs for reproducible evaluation by the defense team.
 
-## Stack
+**Role:** Adversarial attack implementation · Evaluation handoff  
+**Stack:** Python · PyTorch · Adversarial Machine Learning
 
-`C/C++` · `eBPF` · `Python` · `PyTorch` · `FastAPI` · `Linux`
+### [unlicense-arm64](https://github.com/no-carve-only-pizza/unlicense-arm64)
 
-## Contact
+An ARM64-focused research fork for analyzing software license-verification flows
+and architecture-specific behavior.
 
-- Email: [dohyunpkr@gmail.com](mailto:dohyunpkr@gmail.com)
-- LinkedIn: [도현 박](https://www.linkedin.com/in/도현-박-6a3035407)
+**Focus:** ARM64 · Reverse Engineering · Frida · Dynamic Analysis
+
+## Tech Stack
+
+![C](https://img.shields.io/badge/C-A8B9CC?style=flat-square&logo=c&logoColor=111111)
+![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=flat-square&logo=cplusplus&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=111111)
+![eBPF](https://img.shields.io/badge/eBPF-111111?style=flat-square&logo=linuxfoundation&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+
+## Currently
+
+- Building and validating the end-to-end flow of the Linux EDR project
+- Studying security fundamentals and product development in White Hat School, 4th cohort
+- Researching real attack surfaces through parser fuzzing and reproducible crash analysis
+- Working toward a host timeline that explains attacks as connected system events
+
+---
+
+<div align="center">
+
+**Observe the system. Connect the evidence. Explain the attack.**
+
+</div>
