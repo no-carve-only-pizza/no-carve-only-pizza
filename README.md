@@ -90,7 +90,7 @@ and architecture-specific behavior.
 - [GHSA-9q9x-c3p9-pp6r](https://github.com/phaag/nfdump/security/advisories/GHSA-9q9x-c3p9-pp6r) — remote IPFIX Options Template length wrap / DoS in `nfcapd` (CVSS 7.5)
 - [softflowd#67](https://github.com/irino/softflowd/issues/67) · [tcpflow#277](https://github.com/simsong/tcpflow/issues/277) — OOB-read memory-safety reports
 
-More detail (incl. triage advisories): [security-disclosures-2026-07.md](./security-disclosures-2026-07.md)
+Evidence screenshots + triage titles: [security-disclosures-2026-07.md](./security-disclosures-2026-07.md)
 
 ---
 

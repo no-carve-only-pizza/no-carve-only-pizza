@@ -1,8 +1,8 @@
-# Security disclosures — 2026-07 (local draft)
+# Security disclosures — 2026-07
 
-> 외부 계정에 올리기 전 검토용. CVE 번호는 할당되면 이 파일만 갱신하면 됨.
+Public portfolio record. CVE IDs are added when assigned. Evidence screenshots live under [`disclosures/screenshots/`](./disclosures/screenshots/).
 
-## One-liners (resume / GitHub About / LinkedIn)
+## One-liners
 
 - Discovered and reported remote IPFIX use-after-free and divide-by-zero DoS in `nfcapd` (nfdump); both accepted and published as GitHub Security Advisories (CVSS 7.5).
 - Reported additional nfdump collector/file-parser issues under private advisories (triage) and memory-safety bugs in softflowd / tcpflow.
@@ -16,6 +16,34 @@
 
 Reporter credit: `no-carve-only-pizza` (accepted). CVE IDs: pending.
 
+### GHSA-35rg-4vr7-fmr2 — Options Template sequencer UAF
+
+![Published advisory](disclosures/screenshots/ghsa-35rg-uaf/00-ghsa-published.png)
+
+![ASAN UAF live](disclosures/screenshots/ghsa-35rg-uaf/01-asan-uaf-live-reproduction.png)
+
+![Native SIGSEGV](disclosures/screenshots/ghsa-35rg-uaf/02-native-sigsegv-live-reproduction.png)
+
+![PoC packets](disclosures/screenshots/ghsa-35rg-uaf/03-poc-packets-and-hashes.png)
+
+![Version / fix matrix](disclosures/screenshots/ghsa-35rg-uaf/04-version-repeatability-fix-matrix.png)
+
+![Duplicate check](disclosures/screenshots/ghsa-35rg-uaf/05-public-duplicate-check.png)
+
+![Root cause and fix](disclosures/screenshots/ghsa-35rg-uaf/06-root-cause-and-fix.png)
+
+### GHSA-9q9x-c3p9-pp6r — Options Template length wrap / SIGFPE
+
+![Published advisory](disclosures/screenshots/ghsa-9q9x-sigfpe/00-ghsa-published.png)
+
+![ASAN SIGFPE live](disclosures/screenshots/ghsa-9q9x-sigfpe/01-asan-sigfpe-live.png)
+
+![Patched survives](disclosures/screenshots/ghsa-9q9x-sigfpe/02-patched-survives.png)
+
+![Root cause and fix](disclosures/screenshots/ghsa-9q9x-sigfpe/03-root-cause-and-fix.png)
+
+![Duplicate check](disclosures/screenshots/ghsa-9q9x-sigfpe/04-duplicate-check.png)
+
 ## Public issues
 
 | Project | Issue | Class |
@@ -23,7 +51,35 @@ Reporter credit: `no-carve-only-pizza` (accepted). CVE IDs: pending.
 | softflowd | https://github.com/irino/softflowd/issues/67 | MPLS label-depth OOB read + flow-table corruption (CWE-125) |
 | tcpflow | https://github.com/simsong/tcpflow/issues/277 | Crafted-pcap OOB reads (CWE-125), low/DoS |
 
-## Private advisories (triage — do not blog details)
+### softflowd#67
+
+![GitHub issue](disclosures/screenshots/softflowd-67/00-github-issue.png)
+
+![ASAN OOB live](disclosures/screenshots/softflowd-67/01-asan-oob-live.png)
+
+![Patched survives](disclosures/screenshots/softflowd-67/02-patched-survives.png)
+
+![Root cause and fix](disclosures/screenshots/softflowd-67/03-root-cause-and-fix.png)
+
+![Duplicate check](disclosures/screenshots/softflowd-67/04-duplicate-check.png)
+
+### tcpflow#277
+
+![GitHub issue](disclosures/screenshots/tcpflow-277/00-github-issue.png)
+
+![print_packet ASAN](disclosures/screenshots/tcpflow-277/01-print-packet-asan-live.png)
+
+![process_tcp ASAN](disclosures/screenshots/tcpflow-277/02-process-tcp-asan-live.png)
+
+![Patched survives](disclosures/screenshots/tcpflow-277/03-patched-survives.png)
+
+![Root cause and fix](disclosures/screenshots/tcpflow-277/04-root-cause-and-fix.png)
+
+![site3 already guarded](disclosures/screenshots/tcpflow-277/05-site3-already-guarded.png)
+
+![Duplicate check](disclosures/screenshots/tcpflow-277/06-duplicate-check.png)
+
+## Private advisories (triage — titles only, no evidence published here)
 
 | GHSA | Summary (public title only) |
 |------|-------------------------------|
