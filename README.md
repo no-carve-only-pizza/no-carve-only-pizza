@@ -81,8 +81,16 @@ and architecture-specific behavior.
 
 - Building and validating the end-to-end flow of the Linux EDR project
 - Studying security fundamentals and product development in White Hat School, 4th cohort
-- Researching real attack surfaces through parser fuzzing and reproducible crash analysis
+- Researching real attack surfaces through parser fuzzing and responsible disclosure
 - Working toward a host timeline that explains attacks as connected system events
+
+## Selected disclosures (2026)
+
+- [GHSA-35rg-4vr7-fmr2](https://github.com/phaag/nfdump/security/advisories/GHSA-35rg-4vr7-fmr2) — remote IPFIX Options Template UAF in `nfcapd` (CVSS 7.5)
+- [GHSA-9q9x-c3p9-pp6r](https://github.com/phaag/nfdump/security/advisories/GHSA-9q9x-c3p9-pp6r) — remote IPFIX Options Template length wrap / DoS in `nfcapd` (CVSS 7.5)
+- [softflowd#67](https://github.com/irino/softflowd/issues/67) · [tcpflow#277](https://github.com/simsong/tcpflow/issues/277) — OOB-read memory-safety reports
+
+More detail (incl. triage advisories): [security-disclosures-2026-07.md](./security-disclosures-2026-07.md)
 
 ---
 
