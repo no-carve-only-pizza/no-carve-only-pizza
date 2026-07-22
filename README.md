@@ -1,10 +1,8 @@
 <div align="center">
 
-# Dohyun Park
+![header](https://capsule-render.vercel.app/api?type=waving&color=0:2E1065,50:5B21B6,100:7C3AED&height=180&section=header&text=Dohyun%20Park&fontSize=48&fontColor=EDE9FE&animation=fadeIn&fontAlignY=38&desc=Linux%20Security%20%C2%B7%20eBPF%20%C2%B7%20Detection%20Engineering&descSize=16&descAlignY=58&descColor=C4B5FD)
 
-### Linux Security · eBPF · Detection Engineering
-
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=18&pause=1200&color=A78BFA&center=true&vCenter=true&width=640&lines=Observe+the+system;Connect+the+evidence;Explain+the+attack)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=18&pause=1200&color=C4B5FD&center=true&vCenter=true&width=640&lines=Observe+the+system;Connect+the+evidence;Explain+the+attack)](https://git.io/typing-svg)
 
 I build security tools that turn low-level system activity into  
 explainable evidence for detection and response.
@@ -12,6 +10,9 @@ explainable evidence for detection and response.
 [![GitHub](https://img.shields.io/badge/GitHub-no--carve--only--pizza-181717?style=flat-square&logo=github)](https://github.com/no-carve-only-pizza)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Dohyun_Park-0A66C2?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/도현-박-6a3035407)
 [![Email](https://img.shields.io/badge/Email-dohyunpkr%40gmail.com-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:dohyunpkr@gmail.com)
+
+![Profile views](https://komarev.com/ghpvc/?username=no-carve-only-pizza&label=Profile%20views&color=5B21B6&style=flat-square)
+![Followers](https://img.shields.io/github/followers/no-carve-only-pizza?label=Followers&style=flat-square&color=7C3AED)
 
 </div>
 
@@ -96,17 +97,29 @@ Evidence screenshots: [security-disclosures-2026-07.md](./security-disclosures-2
 
 ---
 
+## GitHub Analytics
+
 <div align="center">
 
 <a href="https://github.com/no-carve-only-pizza">
   <img height="160" src="https://github-readme-stats.vercel.app/api?username=no-carve-only-pizza&show_icons=true&theme=radical&hide_border=true&bg_color=0D1117&title_color=C4B5FD&icon_color=A78BFA&text_color=E5E7EB" />
 </a>
 <a href="https://github.com/no-carve-only-pizza">
-  <img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=no-carve-only-pizza&layout=compact&theme=radical&hide_border=true&bg_color=0D1117&title_color=C4B5FD&text_color=E5E7EB" />
+  <img height="160" src="https://github-readme-streak-stats.demolab.com/?user=no-carve-only-pizza&theme=radical&hide_border=true&background=0D1117&ring=7C3AED&fire=A78BFA&currStreakLabel=C4B5FD" />
 </a>
+
+<img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=no-carve-only-pizza&layout=compact&theme=radical&hide_border=true&bg_color=0D1117&title_color=C4B5FD&text_color=E5E7EB" />
+
+<img src="https://github-profile-trophy.vercel.app/?username=no-carve-only-pizza&theme=radical&no-frame=true&no-bg=true&column=7&margin-w=8" />
+
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=no-carve-only-pizza&theme=react-dark&bg_color=0D1117&color=A78BFA&line=7C3AED&point=C4B5FD&area=true&hide_border=true" />
+
+<img src="https://raw.githubusercontent.com/no-carve-only-pizza/no-carve-only-pizza/output/github-contribution-grid-snake-dark.svg" alt="snake" />
 
 <br/><br/>
 
 **Observe the system. Connect the evidence. Explain the attack.**
+
+![footer](https://capsule-render.vercel.app/api?type=waving&color=0:7C3AED,50:5B21B6,100:2E1065&height=100&section=footer)
 
 </div>
