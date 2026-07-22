@@ -102,15 +102,15 @@ Evidence screenshots: [security-disclosures-2026-07.md](./security-disclosures-2
 <div align="center">
 
 <a href="https://github.com/no-carve-only-pizza">
-  <img height="160" src="https://github-readme-stats.vercel.app/api?username=no-carve-only-pizza&show_icons=true&theme=radical&hide_border=true&bg_color=0D1117&title_color=C4B5FD&icon_color=A78BFA&text_color=E5E7EB" />
+  <img height="160" src="https://gh-readme-stats.vercel.app/api?username=no-carve-only-pizza&show_icons=true&theme=radical&hide_border=true&bg_color=0D1117&title_color=C4B5FD&icon_color=A78BFA&text_color=E5E7EB" />
 </a>
 <a href="https://github.com/no-carve-only-pizza">
-  <img height="160" src="https://github-readme-streak-stats.demolab.com/?user=no-carve-only-pizza&theme=radical&hide_border=true&background=0D1117&ring=7C3AED&fire=A78BFA&currStreakLabel=C4B5FD" />
+  <img height="160" src="https://streak-stats.demolab.com/?user=no-carve-only-pizza&theme=radical&hide_border=true&background=0D1117&ring=7C3AED&fire=A78BFA&currStreakLabel=C4B5FD" />
 </a>
 
-<img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=no-carve-only-pizza&layout=compact&theme=radical&hide_border=true&bg_color=0D1117&title_color=C4B5FD&text_color=E5E7EB" />
+<img height="160" src="https://gh-readme-stats.vercel.app/api/top-langs/?username=no-carve-only-pizza&layout=compact&theme=radical&hide_border=true&bg_color=0D1117&title_color=C4B5FD&text_color=E5E7EB" />
 
-<img src="https://github-profile-trophy.vercel.app/?username=no-carve-only-pizza&theme=radical&no-frame=true&no-bg=true&column=7&margin-w=8" />
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=no-carve-only-pizza&theme=radical" />
 
 <img src="https://github-readme-activity-graph.vercel.app/graph?username=no-carve-only-pizza&theme=react-dark&bg_color=0D1117&color=A78BFA&line=7C3AED&point=C4B5FD&area=true&hide_border=true" />
 
