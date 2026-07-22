@@ -4,9 +4,8 @@ Public portfolio record. Only **published** advisories and **public** issues. CV
 
 ## One-liners
 
-- Discovered and reported five remote IPFIX parser issues in `nfcapd` (nfdump); all accepted and published as GitHub Security Advisories (CVSS 7.5 each).
-- Reported and published an NBAR array out-of-bounds read in `nfdump -r` (CVSS 5.5).
-- Reported and published a justniffer / bundled-libnids IP-defrag heap over-read (GHSA, CVSS 8.2, fixed in v0.6.14).
+- Discovered and reported **nine** nfdump issues (5 remote IPFIX in `nfcapd` at CVSS 7.5; 4 local file-parser issues at CVSS 5.5); all published as GitHub Security Advisories.
+- Reported and published a justniffer / bundled-libnids IP-defrag heap over-read (CVSS 8.2, fixed in v0.6.14).
 - Also filed public memory-safety issues for softflowd / tcpflow.
 
 ## Published (credit live)
@@ -20,12 +19,29 @@ Public portfolio record. Only **published** advisories and **public** issues. CV
 | GHSA-4x68-h7hg-9gh4 | nfdump/nfcapd | Remote subTemplateMultiList zero-size CPU exhaustion (CWE-835), CVSS 7.5 | https://github.com/phaag/nfdump/security/advisories/GHSA-4x68-h7hg-9gh4 |
 | GHSA-7rq7-vj35-pw96 | nfdump/nfcapd | Remote zero-length template CPU/disk exhaustion (CWE-835), CVSS 7.5 | https://github.com/phaag/nfdump/security/advisories/GHSA-7rq7-vj35-pw96 |
 | GHSA-5c4g-q9hx-6x4m | nfdump | NBAR array OOB reads (`nfdump -r`, CWE-125), CVSS 5.5 | https://github.com/phaag/nfdump/security/advisories/GHSA-5c4g-q9hx-6x4m |
+| GHSA-qrg4-hf97-rg7g | nfdump | ifvrf array heap OOB read (`nfdump -r`, CWE-125), CVSS 5.5 | https://github.com/phaag/nfdump/security/advisories/GHSA-qrg4-hf97-rg7g |
+| GHSA-jfw9-v5p4-pxw2 | nfdump | Legacy v1 ident stack OOB read (CWE-125), CVSS 5.5 | https://github.com/phaag/nfdump/security/advisories/GHSA-jfw9-v5p4-pxw2 |
+| GHSA-7vhp-748h-jjx6 | nfdump | Appendix NumRecords log-flood DoS (CWE-835), CVSS 5.5 | https://github.com/phaag/nfdump/security/advisories/GHSA-7vhp-748h-jjx6 |
 
-Reporter credit: `no-carve-only-pizza` (accepted). CVE IDs: pending. nfdump fixes are on master (`d744496` covers NBAR; v1.7.9 release pending). justniffer fixed in `>=0.6.14`.
+Reporter credit: `no-carve-only-pizza` (accepted). CVE IDs: pending. nfdump fixes on master (v1.7.9 pending): NBAR/ifvrf `d744496`, appendix `0b0f40e`, v1 ident `7069cfc`. justniffer fixed in `>=0.6.14`.
 
-### GHSA-5c4g-q9hx-6x4m — NBAR array OOB (`nfdump -r`)
+### Newly published file-parser advisories
+
+#### GHSA-5c4g-q9hx-6x4m — NBAR array OOB
 
 ![Published advisory](disclosures/screenshots/ghsa-5c4g-nbar/00-ghsa-published.png)
+
+#### GHSA-qrg4-hf97-rg7g — ifvrf heap OOB
+
+![Published advisory](disclosures/screenshots/ghsa-qrg4-ifvrf/00-ghsa-published.png)
+
+#### GHSA-jfw9-v5p4-pxw2 — legacy v1 ident stack OOB
+
+![Published advisory](disclosures/screenshots/ghsa-jfw9-v1ident/00-ghsa-published.png)
+
+#### GHSA-7vhp-748h-jjx6 — appendix log-flood DoS
+
+![Published advisory](disclosures/screenshots/ghsa-7vhp-appendix/00-ghsa-published.png)
 
 ### GHSA-35rg-4vr7-fmr2 — Options Template sequencer / replacement UAF
 
@@ -99,12 +115,8 @@ Reporter credit: `no-carve-only-pizza` (accepted). CVE IDs: pending. nfdump fixe
 ## Copy-paste blurb (KR) — 관련 경험
 
 관련 경험  
-AFL++/ASAN 퍼징과 LLM을 함께 활용해 오픈소스 네트워크 파서에서 취약점을 찾아 제보·게재했습니다. nfdump 관련 GitHub Security Advisory 6건(원격 IPFIX 5건 + NBAR 파일 파서 OOB 1건)과 justniffer IP defrag 이슈 1건이 published되었고, 최소 PoC·root cause 분석·패치 제안·responsible disclosure까지 진행해 reporter credit을 받았습니다.
+AFL++/ASAN·LLM으로 오픈소스 네트워크 파서 취약점을 찾아 GitHub Security Advisory로 제보·게재했습니다. (PoC·root cause·패치 제안·reporter credit)
 
-취약점 1 — IPFIX Options Template replacement Use-After-Free (GHSA-35rg-4vr7-fmr2, CVSS 7.5, CWE-416)  
-취약점 2 — IPFIX withdraw-all 처리 Use-After-Free (GHSA-h97c-j4xh-mrwh, CVSS 7.5, CWE-416)  
-취약점 3 — IPFIX Options Template length wrap로 인한 SIGFPE (GHSA-9q9x-c3p9-pp6r, CVSS 7.5, CWE-369)  
-취약점 4 — IPFIX subTemplateMultiList zero-size entry 무한 루프 / CPU 고갈 (GHSA-4x68-h7hg-9gh4, CVSS 7.5, CWE-835)  
-취약점 5 — IPFIX zero-length template field 무한 루프 / CPU·디스크 고갈 (GHSA-7rq7-vj35-pw96, CVSS 7.5, CWE-835)  
-취약점 6 — malformed NBAR array record Out-of-Bounds Read (`nfdump -r`, GHSA-5c4g-q9hx-6x4m, CVSS 5.5, CWE-125; fixed in `d744496` / 1.7.9)  
-취약점 7 — undersized IP fragment 처리 Heap Over-Read (GHSA-3gvq-jf6c-94v8, justniffer, CVSS 8.2, CWE-125; fixed in v0.6.14)
+- nfdump/`nfcapd` 원격 IPFIX 5건 (UAF 2 · SIGFPE 1 · CPU/디스크 DoS 2, 각 CVSS 7.5)
+- nfdump 파일 파서 4건 (`nfdump -r`: NBAR/ifvrf OOB, v1 ident stack OOB, appendix log-flood; 각 CVSS 5.5)
+- justniffer IP fragment heap over-read (CVSS 8.2, fixed v0.6.14): GHSA-3gvq-jf6c-94v8

@@ -92,7 +92,7 @@ and architecture-specific behavior.
 - [GHSA-3gvq-jf6c-94v8](https://github.com/onotelli/justniffer/security/advisories/GHSA-3gvq-jf6c-94v8) — IP-fragment heap over-read in justniffer (CVSS 8.2; fixed in v0.6.14)
 - [GHSA-35rg-4vr7-fmr2](https://github.com/phaag/nfdump/security/advisories/GHSA-35rg-4vr7-fmr2) · [GHSA-h97c-j4xh-mrwh](https://github.com/phaag/nfdump/security/advisories/GHSA-h97c-j4xh-mrwh) — remote IPFIX UAFs in `nfcapd` (CVSS 7.5)
 - [GHSA-9q9x-c3p9-pp6r](https://github.com/phaag/nfdump/security/advisories/GHSA-9q9x-c3p9-pp6r) · [GHSA-4x68-h7hg-9gh4](https://github.com/phaag/nfdump/security/advisories/GHSA-4x68-h7hg-9gh4) · [GHSA-7rq7-vj35-pw96](https://github.com/phaag/nfdump/security/advisories/GHSA-7rq7-vj35-pw96) — remote IPFIX DoS in `nfcapd` (CVSS 7.5)
-- [GHSA-5c4g-q9hx-6x4m](https://github.com/phaag/nfdump/security/advisories/GHSA-5c4g-q9hx-6x4m) — NBAR array OOB in `nfdump -r` (CVSS 5.5; fixed in `d744496`)
+- [GHSA-5c4g-q9hx-6x4m](https://github.com/phaag/nfdump/security/advisories/GHSA-5c4g-q9hx-6x4m) · [GHSA-qrg4-hf97-rg7g](https://github.com/phaag/nfdump/security/advisories/GHSA-qrg4-hf97-rg7g) · [GHSA-jfw9-v5p4-pxw2](https://github.com/phaag/nfdump/security/advisories/GHSA-jfw9-v5p4-pxw2) · [GHSA-7vhp-748h-jjx6](https://github.com/phaag/nfdump/security/advisories/GHSA-7vhp-748h-jjx6) — `nfdump -r` file-parser issues (CVSS 5.5)
 - [softflowd#67](https://github.com/irino/softflowd/issues/67) · [tcpflow#277](https://github.com/simsong/tcpflow/issues/277) — OOB-read memory-safety reports
 
 Full list: [security-disclosures-2026-07.md](./security-disclosures-2026-07.md)
