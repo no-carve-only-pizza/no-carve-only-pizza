@@ -1,292 +1,112 @@
 <div align="center">
 
-![header](https://capsule-render.vercel.app/api?type=waving&color=0:2E1065,50:5B21B6,100:7C3AED&height=200&section=header&text=Dohyun%20Park&fontSize=54&fontColor=EDE9FE&animation=fadeIn&fontAlignY=35&desc=Linux%20Security%20%C2%B7%20eBPF%20%C2%B7%20Detection%20Engineering&descSize=18&descAlignY=55&descColor=C4B5FD)
+# Dohyun Park
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=C4B5FD&center=true&vCenter=true&width=780&lines=Observe+the+system;Connect+the+evidence;Explain+the+attack;Building+explainable+security+tools)](https://git.io/typing-svg)
+### Linux Security · eBPF · Detection Engineering
 
-<br/>
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=18&pause=1200&color=A78BFA&center=true&vCenter=true&width=640&lines=Observe+the+system;Connect+the+evidence;Explain+the+attack)](https://git.io/typing-svg)
 
-![Soongsil](https://img.shields.io/badge/Soongsil_University-AI_Software-5B21B6?style=for-the-badge&logo=google-scholar&logoColor=white)
-![Location](https://img.shields.io/badge/Seoul-ROK-312E81?style=for-the-badge&logo=googlemaps&logoColor=white)
-![WHS](https://img.shields.io/badge/White_Hat_School-4th_Cohort-7C3AED?style=for-the-badge&logo=securityscorecard&logoColor=white)
+I build security tools that turn low-level system activity into  
+explainable evidence for detection and response.
 
-<br/>
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Dohyun_Park-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/도현-박-6a3035407)
-[![Email](https://img.shields.io/badge/Email-dohyunpkr%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:dohyunpkr@gmail.com)
-[![GitHub](https://img.shields.io/badge/GitHub-no--carve--only--pizza-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/no-carve-only-pizza)
-
-<br/>
-
-![Profile views](https://komarev.com/ghpvc/?username=no-carve-only-pizza&label=Profile%20views&color=5B21B6&style=flat-square)
-![Followers](https://img.shields.io/github/followers/no-carve-only-pizza?label=Followers&style=flat-square&color=7C3AED)
-![Stars](https://img.shields.io/github/stars/no-carve-only-pizza?affiliations=OWNER&label=Stars&style=flat-square&color=A78BFA)
+[![GitHub](https://img.shields.io/badge/GitHub-no--carve--only--pizza-181717?style=flat-square&logo=github)](https://github.com/no-carve-only-pizza)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Dohyun_Park-0A66C2?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/도현-박-6a3035407)
+[![Email](https://img.shields.io/badge/Email-dohyunpkr%40gmail.com-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:dohyunpkr@gmail.com)
 
 </div>
 
 ---
 
-## About
+## About Me
 
-<div align="center">
+I'm a second-year AI Software student at Soongsil University, focused on Linux
+security and security product development.
 
-**Security engineering student** focused on turning low-level Linux activity into  
-**explainable evidence** for detection and response.
+At ASC, my university security club, I lead a four-person team and develop the
+system agent for an eBPF-based Linux EDR project. The project began with a simple
+question after analyzing <code>CVE-2025-55423</code>: beyond reproducing an attack,
+how can we explain what actually happened inside the system?
 
-</div>
+My goal is to connect process, file, network, and other endpoint events into
+evidence that helps people understand and respond to an attack.
 
-I'm a second-year AI Software student at **Soongsil University**. I build tools that observe process, file, network, and other endpoint events — then connect them so people can understand what an attack actually did inside the system.
+## Focus
 
-At **ASC**, my university security club, I lead a four-person team and develop the system agent for an **eBPF-based Linux EDR**. The project started after analyzing `CVE-2025-55423`: beyond reproducing an attack, how do we explain what followed?
-
-I also do **vulnerability research** with fuzzing and responsible disclosure, and adversarial ML work for the 2026 Hanium ICT Mentoring program.
-
-### Open To
-
-- Security product / detection engineering internships
-- Collaboration on Linux security tooling and responsible disclosure
-- Mentorship around eBPF, EDR, and vuln research workflows
-
----
-
-## Tech Stack
-
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=c,cpp,python,linux,docker,pytorch,fastapi,githubactions,bash,git" />
-</p>
-
-| Area | Tools |
+| Area | What I work on |
 |---|---|
-| **Languages** | C · C++ · Python · Bash |
-| **Systems / Security** | Linux · eBPF / libbpf · Frida · AFL++ |
-| **AI / ML** | PyTorch · Adversarial ML (FGSM / PGD / Square / JSMA / ZOO) |
-| **Backend & Tooling** | FastAPI · CMake · Docker · GitHub Actions · systemd |
-
----
-
-## Domain Expertise
-
-| Domain | Proficiency | Details |
-|---|---|---|
-| Linux Security | High | Endpoint telemetry, eBPF probes, system event pipelines |
-| Detection Engineering | High | Behavioral rules, correlation windows, explainable evidence |
-| Vulnerability Research | High | Fuzzing, root-cause analysis, GHSA / public issue disclosure |
-| Adversarial ML | Intermediate | Attack implementation against face ID / verification models |
-| Reverse Engineering | Intermediate | ARM64 flows, dynamic analysis with Frida |
-
----
+| **Linux Security** | System activity, endpoint telemetry, and attack traces |
+| **Detection Engineering** | Behavioral rules, event correlation, and explainable evidence |
+| **Security Product Development** | Collection, detection, validation, deployment, and documentation |
+| **Vulnerability Research** | Reproduction, root-cause analysis, fuzzing, and responsible disclosure |
 
 ## Featured Projects
 
-<details open>
-<summary><strong>edr-agent</strong> — eBPF Linux EDR agent</summary>
-<br/>
+### [edr-agent](https://github.com/no-carve-only-pizza/edr-agent)
 
-An eBPF-based Linux endpoint security agent that collects process, file, network, memory, DNS, and namespace events. Implements 28 behavioral detection rules, sliding-window correlation, threat-intel feeds, EWMA anomaly detection, and Unix socket-based response.
+An eBPF-based Linux endpoint security agent that collects process, file, network,
+memory, DNS, and namespace events. It implements 28 behavioral detection rules,
+event correlation, threat-intelligence feeds, anomaly detection, and Unix
+socket-based response.
 
-| | |
-|---|---|
-| **Stack** | C++ · eBPF/libbpf · CMake · Linux · systemd |
-| **Scale** | Multi-event telemetry pipeline (process / file / net / mem / DNS / ns) |
-| **Detection** | 28 behavioral rules + correlation + TI feeds + EWMA |
-| **Security** | Active response via Unix socket; designed for explainable host evidence |
-| **Impact** | ASC team flagship; system agent owned end-to-end by me as team lead |
-| **Repository** | [no-carve-only-pizza/edr-agent](https://github.com/no-carve-only-pizza/edr-agent) |
+**Role:** Team lead · System agent development  
+**Stack:** C++ · eBPF/libbpf · CMake · Linux
 
-Grew out of `CVE-2025-55423` analysis: not just “did the exploit work?”, but “what chain of system events proves what happened?”
+### [hanium-aml](https://github.com/no-carve-only-pizza/hanium-aml)
 
-</details>
+Attack-side research for the 2026 Hanium ICT Mentoring project. I implemented
+FGSM, PGD, Square, JSMA, and ZOO attacks against face recognition and verification
+models, and organized the outputs for reproducible evaluation by the defense team.
 
-<details>
-<summary><strong>hanium-aml</strong> — adversarial attacks on face auth</summary>
-<br/>
+**Role:** Adversarial attack implementation · Evaluation handoff  
+**Stack:** Python · PyTorch · Adversarial Machine Learning
 
-Attack-side research for the 2026 Hanium ICT Mentoring project. Implemented FGSM, PGD, Square, JSMA, and ZOO against face recognition / verification pipelines and packaged results for the defense team’s reproducible evaluation.
+### [unlicense-arm64](https://github.com/no-carve-only-pizza/unlicense-arm64)
 
-| | |
-|---|---|
-| **Stack** | Python · PyTorch · Adversarial ML |
-| **Scale** | ResNet-50 / FaceNet attack pipelines |
-| **Performance** | Multi-attack suite (white-box + black-box) |
-| **Security** | Measures robustness gaps in biometric auth models |
-| **Impact** | Attack-team deliverable for Hanium ICT Mentoring (`26_HC160`) |
-| **Repository** | [no-carve-only-pizza/hanium-aml](https://github.com/no-carve-only-pizza/hanium-aml) |
+An ARM64-focused research fork for analyzing software license-verification flows
+and architecture-specific behavior.
 
-</details>
+**Focus:** ARM64 · Reverse Engineering · Frida · Dynamic Analysis
 
-<details>
-<summary><strong>unlicense-arm64</strong> — ARM64 reverse engineering research</summary>
-<br/>
+## Tech Stack
 
-ARM64-focused research fork for analyzing software license-verification flows and architecture-specific behavior with dynamic instrumentation.
+![C](https://img.shields.io/badge/C-A8B9CC?style=flat-square&logo=c&logoColor=111111)
+![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=flat-square&logo=cplusplus&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=111111)
+![eBPF](https://img.shields.io/badge/eBPF-111111?style=flat-square&logo=linuxfoundation&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
 
-| | |
-|---|---|
-| **Stack** | ARM64 · Frida · Dynamic analysis |
-| **Focus** | License-verification flow RE on Apple Silicon |
-| **Security** | Architecture-aware binary analysis |
-| **Impact** | Public research fork for reproducible ARM64 investigation |
-| **Repository** | [no-carve-only-pizza/unlicense-arm64](https://github.com/no-carve-only-pizza/unlicense-arm64) |
+## Currently
 
-</details>
+- Building and validating the end-to-end flow of the Linux EDR project
+- Studying security fundamentals and product development in White Hat School, 4th cohort
+- Researching real attack surfaces through parser fuzzing and responsible disclosure
+- Working toward a host timeline that explains attacks as connected system events
 
-<details>
-<summary><strong>Selected disclosures (2026)</strong> — nfdump / softflowd / tcpflow</summary>
-<br/>
+## Selected disclosures (2026)
 
-Responsible disclosure of remote and memory-safety issues found via parser fuzzing and root-cause analysis.
-
-| ID | Product | Class | Link |
-|---|---|---|---|
-| GHSA-35rg-4vr7-fmr2 | nfdump / nfcapd | Remote UAF (CWE-416), CVSS 7.5 | [Advisory](https://github.com/phaag/nfdump/security/advisories/GHSA-35rg-4vr7-fmr2) |
-| GHSA-9q9x-c3p9-pp6r | nfdump / nfcapd | Remote SIGFPE / div-by-zero (CWE-369), CVSS 7.5 | [Advisory](https://github.com/phaag/nfdump/security/advisories/GHSA-9q9x-c3p9-pp6r) |
-| softflowd#67 | softflowd | MPLS label-depth OOB read | [Issue](https://github.com/irino/softflowd/issues/67) |
-| tcpflow#277 | tcpflow | Crafted-pcap OOB reads | [Issue](https://github.com/simsong/tcpflow/issues/277) |
+- [GHSA-35rg-4vr7-fmr2](https://github.com/phaag/nfdump/security/advisories/GHSA-35rg-4vr7-fmr2) — remote IPFIX Options Template UAF in `nfcapd` (CVSS 7.5)
+- [GHSA-9q9x-c3p9-pp6r](https://github.com/phaag/nfdump/security/advisories/GHSA-9q9x-c3p9-pp6r) — remote IPFIX Options Template length wrap / DoS in `nfcapd` (CVSS 7.5)
+- [softflowd#67](https://github.com/irino/softflowd/issues/67) · [tcpflow#277](https://github.com/simsong/tcpflow/issues/277) — OOB-read memory-safety reports
 
 Evidence screenshots: [security-disclosures-2026-07.md](./security-disclosures-2026-07.md)
 
-</details>
-
 ---
-
-## Experience
-
-### Team Lead · System Agent — ASC (Soongsil Security Club)
-**2026 — Present**
-
-Lead a four-person team building an eBPF-based Linux EDR. Own the agent: telemetry collection, detection logic, and response path. Backend and dashboard are owned by teammates.
-
-- Designed and implemented the system agent around real attack-trace questions from `CVE-2025-55423`
-- Built multi-source endpoint event collection and behavioral detection pipeline
-- Coordinated handoff so web dashboard work can sit on explainable host evidence
-
-`C++` `eBPF` `libbpf` `Detection Engineering` `Team Leadership`
-
-### Trainee — White Hat School, 4th Cohort
-**2026 — Present**
-
-Studying security fundamentals and security product development with emphasis on building, validating, and documenting real tools — not just theory.
-
-`Security Product Development` `Blue Team` `Hands-on Labs`
-
-### Attack Team — Hanium ICT Mentoring (26_HC160)
-**2026**
-
-Implemented adversarial attack suite against face recognition / verification models and packaged outputs for defense-team evaluation.
-
-`PyTorch` `Adversarial ML` `Research Handoff`
-
----
-
-## Achievements
-
-<div align="center">
-
-| Recognition | Details |
-|---|---|
-| **GHSA-35rg-4vr7-fmr2** | Remote IPFIX Options Template UAF in `nfcapd` — accepted & published (CVSS 7.5) |
-| **GHSA-9q9x-c3p9-pp6r** | Remote IPFIX Options Template length wrap / DoS — accepted & published (CVSS 7.5) |
-| **Public memory-safety reports** | softflowd#67 · tcpflow#277 |
-| **ASC Team Lead** | Leading 4-person eBPF Linux EDR project |
-| **Hanium ICT Mentoring** | Attack-side adversarial ML deliverable for face auth research |
-
-</div>
-
----
-
-## Education & Programs
-
-| Program | Status |
-|---|---|
-| **Soongsil University** — School of AI Software | 2nd year (2026) |
-| **White Hat School** — 4th cohort | In progress |
-| **ASC** — university security club | Active · team lead |
-| **Hanium ICT Mentoring** — 26_HC160 | Attack team |
-
----
-
-## GitHub Analytics
 
 <div align="center">
 
 <a href="https://github.com/no-carve-only-pizza">
-  <img height="180" src="https://github-readme-stats.vercel.app/api?username=no-carve-only-pizza&show_icons=true&theme=radical&hide_border=true&bg_color=0D1117&title_color=C4B5FD&icon_color=A78BFA&text_color=E5E7EB" />
+  <img height="160" src="https://github-readme-stats.vercel.app/api?username=no-carve-only-pizza&show_icons=true&theme=radical&hide_border=true&bg_color=0D1117&title_color=C4B5FD&icon_color=A78BFA&text_color=E5E7EB" />
 </a>
 <a href="https://github.com/no-carve-only-pizza">
-  <img height="180" src="https://github-readme-streak-stats.demolab.com/?user=no-carve-only-pizza&theme=radical&hide_border=true&background=0D1117&ring=7C3AED&fire=A78BFA&currStreakLabel=C4B5FD" />
+  <img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=no-carve-only-pizza&layout=compact&theme=radical&hide_border=true&bg_color=0D1117&title_color=C4B5FD&text_color=E5E7EB" />
 </a>
 
-<img height="180" src="https://github-readme-stats.vercel.app/api/top-langs/?username=no-carve-only-pizza&layout=compact&theme=radical&hide_border=true&bg_color=0D1117&title_color=C4B5FD&text_color=E5E7EB" />
-
-</div>
-
----
-
-## GitHub Trophies
-
-<div align="center">
-
-<img src="https://github-profile-trophy.vercel.app/?username=no-carve-only-pizza&theme=radical&no-frame=true&no-bg=true&column=7&margin-w=8" />
-
-</div>
-
----
-
-## Contribution Activity
-
-<div align="center">
-
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=no-carve-only-pizza&theme=react-dark&bg_color=0D1117&color=A78BFA&line=7C3AED&point=C4B5FD&area=true&hide_border=true" />
-
-</div>
-
----
-
-## Contribution Snake
-
-<div align="center">
-
-<img src="https://raw.githubusercontent.com/no-carve-only-pizza/no-carve-only-pizza/output/github-contribution-grid-snake-dark.svg" alt="snake" />
-
-</div>
-
----
-
-## Current Focus
-
-```yaml
-learning:
-  - White Hat School 4th cohort — security product fundamentals
-  - Detection engineering & explainable host timelines
-building:
-  - eBPF Linux EDR end-to-end validation (edr-agent)
-  - Responsible disclosure evidence packs
-exploring:
-  - Remote-reachable memory corruption in network parsers
-  - AFL++ campaign methodology on real attack surfaces
-open_to:
-  - Security engineering internships
-  - Collaboration on Linux security tooling
-```
-
----
-
-## Connect
-
-<div align="center">
-
-[![Gmail](https://img.shields.io/badge/Gmail-dohyunpkr%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:dohyunpkr@gmail.com)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Dohyun_Park-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/도현-박-6a3035407)
-[![GitHub](https://img.shields.io/badge/GitHub-no--carve--only--pizza-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/no-carve-only-pizza)
-
-</div>
-
----
-
-<div align="center">
+<br/><br/>
 
 **Observe the system. Connect the evidence. Explain the attack.**
-
-![footer](https://capsule-render.vercel.app/api?type=waving&color=0:7C3AED,50:5B21B6,100:2E1065&height=120&section=footer)
 
 </div>
