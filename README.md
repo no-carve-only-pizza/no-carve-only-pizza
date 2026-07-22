@@ -2,17 +2,17 @@
 
 ![header](./profile/header.svg)
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=18&pause=1200&color=C4B5FD&center=true&vCenter=true&width=640&lines=Observe+the+system;Connect+the+evidence;Explain+the+attack)](https://git.io/typing-svg)
+[![Typing SVG](./profile/typing.svg)](https://github.com/no-carve-only-pizza)
 
 I build security tools that turn low-level system activity into  
 explainable evidence for detection and response.
 
-[![GitHub](https://img.shields.io/badge/GitHub-no--carve--only--pizza-181717?style=flat-square&logo=github)](https://github.com/no-carve-only-pizza)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Dohyun_Park-0A66C2?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/도현-박-6a3035407)
-[![Email](https://img.shields.io/badge/Email-dohyunpkr%40gmail.com-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:dohyunpkr@gmail.com)
+[![GitHub](./profile/badge-github.svg)](https://github.com/no-carve-only-pizza)
+[![LinkedIn](./profile/badge-linkedin.svg)](https://www.linkedin.com/in/도현-박-6a3035407)
+[![Email](./profile/badge-email.svg)](mailto:dohyunpkr@gmail.com)
 
-![Profile views](https://komarev.com/ghpvc/?username=no-carve-only-pizza&label=Profile%20views&color=5B21B6&style=flat-square)
-![Followers](https://img.shields.io/github/followers/no-carve-only-pizza?label=Followers&style=flat-square&color=7C3AED)
+![Profile views](./profile/views.svg)
+![Followers](./profile/followers.svg)
 
 </div>
 
