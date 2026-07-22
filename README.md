@@ -89,11 +89,13 @@ and architecture-specific behavior.
 
 ## Selected disclosures (2026)
 
-- [GHSA-35rg-4vr7-fmr2](https://github.com/phaag/nfdump/security/advisories/GHSA-35rg-4vr7-fmr2) — remote IPFIX Options Template UAF in `nfcapd` (CVSS 7.5)
-- [GHSA-9q9x-c3p9-pp6r](https://github.com/phaag/nfdump/security/advisories/GHSA-9q9x-c3p9-pp6r) — remote IPFIX Options Template length wrap / DoS in `nfcapd` (CVSS 7.5)
+- [GHSA-3gvq-jf6c-94v8](https://github.com/onotelli/justniffer/security/advisories/GHSA-3gvq-jf6c-94v8) — IP-fragment heap over-read in justniffer (CVSS 8.2; fixed in v0.6.14)
+- [GHSA-35rg-4vr7-fmr2](https://github.com/phaag/nfdump/security/advisories/GHSA-35rg-4vr7-fmr2) · [GHSA-h97c-j4xh-mrwh](https://github.com/phaag/nfdump/security/advisories/GHSA-h97c-j4xh-mrwh) — remote IPFIX UAFs in `nfcapd` (CVSS 7.5)
+- [GHSA-9q9x-c3p9-pp6r](https://github.com/phaag/nfdump/security/advisories/GHSA-9q9x-c3p9-pp6r) · [GHSA-4x68-h7hg-9gh4](https://github.com/phaag/nfdump/security/advisories/GHSA-4x68-h7hg-9gh4) · [GHSA-7rq7-vj35-pw96](https://github.com/phaag/nfdump/security/advisories/GHSA-7rq7-vj35-pw96) — remote IPFIX DoS in `nfcapd` (CVSS 7.5)
+- GHSA-5c4g-q9hx-6x4m — NBAR array OOB in `nfdump -r` (CVSS 5.5; accepted, public advisory pending)
 - [softflowd#67](https://github.com/irino/softflowd/issues/67) · [tcpflow#277](https://github.com/simsong/tcpflow/issues/277) — OOB-read memory-safety reports
 
-Evidence screenshots: [security-disclosures-2026-07.md](./security-disclosures-2026-07.md)
+Full list: [security-disclosures-2026-07.md](./security-disclosures-2026-07.md)
 
 ---
 

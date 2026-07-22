@@ -4,19 +4,25 @@ Public portfolio record. CVE IDs are added when assigned. Evidence screenshots l
 
 ## One-liners
 
-- Discovered and reported remote IPFIX use-after-free and divide-by-zero DoS in `nfcapd` (nfdump); both accepted and published as GitHub Security Advisories (CVSS 7.5).
-- Reported additional nfdump collector/file-parser issues under private advisories (triage) and memory-safety bugs in softflowd / tcpflow.
+- Discovered and reported five remote IPFIX parser issues in `nfcapd` (nfdump); all accepted and published as GitHub Security Advisories (CVSS 7.5 each).
+- Reported and published a justniffer / bundled-libnids IP-defrag heap over-read (GHSA, CVSS 8.2, fixed in v0.6.14).
+- NBAR array OOB in `nfdump -r` (GHSA-5c4g-q9hx-6x4m) accepted by maintainer (draft; not public yet, CVSS 5.5).
+- Also filed public memory-safety issues for softflowd / tcpflow; three more nfdump file-parser advisories remain in private triage.
 
 ## Published (credit live)
 
 | ID | Product | Class | Link |
 |----|---------|-------|------|
-| GHSA-35rg-4vr7-fmr2 | nfdump/nfcapd | Remote UAF (CWE-416), CVSS 7.5 | https://github.com/phaag/nfdump/security/advisories/GHSA-35rg-4vr7-fmr2 |
-| GHSA-9q9x-c3p9-pp6r | nfdump/nfcapd | Remote SIGFPE / div-by-zero (CWE-369), CVSS 7.5 | https://github.com/phaag/nfdump/security/advisories/GHSA-9q9x-c3p9-pp6r |
+| GHSA-3gvq-jf6c-94v8 | justniffer | Heap over-read in undersized IP fragment handling (CWE-125), CVSS 8.2 | https://github.com/onotelli/justniffer/security/advisories/GHSA-3gvq-jf6c-94v8 |
+| GHSA-35rg-4vr7-fmr2 | nfdump/nfcapd | Remote Options Template replacement UAF (CWE-416), CVSS 7.5 | https://github.com/phaag/nfdump/security/advisories/GHSA-35rg-4vr7-fmr2 |
+| GHSA-h97c-j4xh-mrwh | nfdump/nfcapd | Remote withdraw-all UAF (CWE-416), CVSS 7.5 | https://github.com/phaag/nfdump/security/advisories/GHSA-h97c-j4xh-mrwh |
+| GHSA-9q9x-c3p9-pp6r | nfdump/nfcapd | Remote Options Template length wrap / SIGFPE (CWE-369), CVSS 7.5 | https://github.com/phaag/nfdump/security/advisories/GHSA-9q9x-c3p9-pp6r |
+| GHSA-4x68-h7hg-9gh4 | nfdump/nfcapd | Remote subTemplateMultiList zero-size CPU exhaustion (CWE-835), CVSS 7.5 | https://github.com/phaag/nfdump/security/advisories/GHSA-4x68-h7hg-9gh4 |
+| GHSA-7rq7-vj35-pw96 | nfdump/nfcapd | Remote zero-length template CPU/disk exhaustion (CWE-835), CVSS 7.5 | https://github.com/phaag/nfdump/security/advisories/GHSA-7rq7-vj35-pw96 |
 
-Reporter credit: `no-carve-only-pizza` (accepted). CVE IDs: pending.
+Reporter credit: `no-carve-only-pizza` (accepted). CVE IDs: pending. nfdump fixes are on master; v1.7.9 release pending. justniffer fixed in `>=0.6.14`.
 
-### GHSA-35rg-4vr7-fmr2 — Options Template sequencer UAF
+### GHSA-35rg-4vr7-fmr2 — Options Template sequencer / replacement UAF
 
 ![Published advisory](disclosures/screenshots/ghsa-35rg-uaf/00-ghsa-published.png)
 
@@ -43,6 +49,12 @@ Reporter credit: `no-carve-only-pizza` (accepted). CVE IDs: pending.
 ![Root cause and fix](disclosures/screenshots/ghsa-9q9x-sigfpe/03-root-cause-and-fix.png)
 
 ![Duplicate check](disclosures/screenshots/ghsa-9q9x-sigfpe/04-duplicate-check.png)
+
+### justniffer — GHSA-3gvq-jf6c-94v8 / issue #19
+
+![ASAN file mode](disclosures/screenshots/justniffer-19/01-asan-read-file-mode.png)
+
+![ASAN live veth](disclosures/screenshots/justniffer-19/01-asan-read-live-veth.png)
 
 ## Public issues
 
@@ -79,24 +91,37 @@ Reporter credit: `no-carve-only-pizza` (accepted). CVE IDs: pending.
 
 ![Duplicate check](disclosures/screenshots/tcpflow-277/06-duplicate-check.png)
 
-## Private advisories (triage — titles only, no evidence published here)
+## Accepted (private draft — not public yet)
+
+| GHSA | Summary | Status |
+|------|---------|--------|
+| GHSA-5c4g-q9hx-6x4m | NBAR array OOB reads (`nfdump -r`), CVSS 5.5 Medium | Accepted 2026-07-22 → draft (public page not live) |
+
+## Private advisories (still triage — titles only)
 
 | GHSA | Summary (public title only) |
 |------|-------------------------------|
-| GHSA-h97c-j4xh-mrwh | IPFIX withdraw-all remote UAF |
-| GHSA-7rq7-vj35-pw96 | IPFIX zero-length template CPU/disk exhaustion |
-| GHSA-4x68-h7hg-9gh4 | IPFIX subTemplateMultiList zero-size CPU exhaustion |
 | GHSA-qrg4-hf97-rg7g | ifvrf array heap OOB read (`nfdump -r`) |
-| GHSA-5c4g-q9hx-6x4m | NBAR array OOB reads (`nfdump -r`) |
 | GHSA-jfw9-v5p4-pxw2 | Legacy v1 ident stack OOB read |
 | GHSA-7vhp-748h-jjx6 | Appendix NumRecords log-flood DoS |
 
-## Copy-paste blurb (KR)
+## Copy-paste blurb (KR) — 관련 경험
 
-nfdump `nfcapd`에서 원격·무인증 IPFIX 파서 취약점 2건(UAF, 정수 나눗셈/DoS)을 발견·제보했고 GitHub Security Advisory로 공개·패치됐다 (각 CVSS 7.5). softflowd·tcpflow의 OOB read도 공개 이슈로 제보했다.
+관련 경험  
+AFL++/ASAN 퍼징과 LLM을 함께 활용해 오픈소스 네트워크 파서에서 취약점을 찾아 제보·게재했습니다. nfdump/`nfcapd` 원격 IPFIX 이슈 5건과 justniffer IP defrag 이슈 1건이 GitHub Security Advisory로 published되었고, nfdump NBAR 파일 파서 OOB 1건은 메인테이너가 accept했습니다. 최소 PoC·root cause 분석·패치 제안·responsible disclosure까지 진행해 reporter credit을 받았습니다.
+
+취약점 1 — IPFIX Options Template replacement Use-After-Free (GHSA-35rg-4vr7-fmr2, CVSS 7.5, CWE-416)  
+취약점 2 — IPFIX withdraw-all 처리 Use-After-Free (GHSA-h97c-j4xh-mrwh, CVSS 7.5, CWE-416)  
+취약점 3 — IPFIX Options Template length wrap로 인한 SIGFPE (GHSA-9q9x-c3p9-pp6r, CVSS 7.5, CWE-369)  
+취약점 4 — IPFIX subTemplateMultiList zero-size entry 무한 루프 / CPU 고갈 (GHSA-4x68-h7hg-9gh4, CVSS 7.5, CWE-835)  
+취약점 5 — IPFIX zero-length template field 무한 루프 / CPU·디스크 고갈 (GHSA-7rq7-vj35-pw96, CVSS 7.5, CWE-835)  
+취약점 6 — undersized IP fragment 처리 Heap Over-Read (GHSA-3gvq-jf6c-94v8, justniffer, CVSS 8.2, CWE-125; fixed in v0.6.14)  
+취약점 7 — malformed NBAR array record Out-of-Bounds Read (`nfdump -r`, GHSA-5c4g-q9hx-6x4m, CVSS 5.5, CWE-125; accepted, 공개 대기)
 
 ## Next updates
 
 - [ ] CVE IDs land → add to table and one-liners
-- [ ] Patched release tags → note versions
+- [ ] nfdump patched release tag (v1.7.9) → note versions
+- [ ] GHSA-5c4g-q9hx-6x4m publishes → move to Published + screenshots
+- [ ] Screenshots for newly published nfdump GHSAs (h97c / 4x68 / 7rq7) + justniffer GHSA page
 - [ ] softflowd/tcpflow maintainer response → status line
