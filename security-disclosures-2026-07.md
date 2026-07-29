@@ -6,7 +6,7 @@ Public portfolio record. Only **published** advisories and **public** issues. CV
 
 - Discovered and reported **nine** nfdump issues (5 remote IPFIX in `nfcapd` at CVSS 7.5; 4 local file-parser issues at CVSS 5.5); all published as GitHub Security Advisories.
 - Reported and published a justniffer / bundled-libnids IP-defrag heap over-read (CVSS 8.2, fixed in v0.6.14).
-- Also filed public memory-safety issues for softflowd / tcpflow.
+- Also filed public memory-safety issues for softflowd (fixed upstream, commit `74c311f`) and tcpflow (still open).
 
 ## Published (credit live)
 
@@ -79,12 +79,14 @@ Reporter credit: `no-carve-only-pizza` (accepted). CVE IDs: pending. nfdump fixe
 
 ## Public issues
 
-| Project | Issue | Class |
-|---------|-------|-------|
-| softflowd | https://github.com/irino/softflowd/issues/67 | MPLS label-depth OOB read + flow-table corruption (CWE-125) |
-| tcpflow | https://github.com/simsong/tcpflow/issues/277 | Crafted-pcap OOB reads (CWE-125), low/DoS |
+| Project | Issue | Class | Status |
+|---------|-------|-------|--------|
+| softflowd | https://github.com/irino/softflowd/issues/67 | MPLS label-depth OOB read + flow-table corruption (CWE-125) | Fixed upstream in [`74c311f`](https://github.com/irino/softflowd/commit/74c311f), closed 2026-07-26 |
+| tcpflow | https://github.com/simsong/tcpflow/issues/277 | Crafted-pcap OOB reads (CWE-125), low/DoS | Open |
 
 ### softflowd#67
+
+Fixed upstream in commit [`74c311f`](https://github.com/irino/softflowd/commit/74c311f); maintainer closed the issue as completed on 2026-07-26. A duplicate report, [#66](https://github.com/irino/softflowd/issues/66), was closed as a duplicate of this issue the same day.
 
 ![GitHub issue](disclosures/screenshots/softflowd-67/00-github-issue.png)
 
@@ -120,3 +122,75 @@ AFL++/ASAN·LLM으로 오픈소스 네트워크 파서 취약점을 찾아 GitHu
 - nfdump/`nfcapd` 원격 IPFIX 5건 (UAF 2 · SIGFPE 1 · CPU/디스크 DoS 2, 각 CVSS 7.5)
 - nfdump 파일 파서 4건 (`nfdump -r`: NBAR/ifvrf OOB, v1 ident stack OOB, appendix log-flood; 각 CVSS 5.5)
 - justniffer IP fragment heap over-read (CVSS 8.2, fixed v0.6.14): GHSA-3gvq-jf6c-94v8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
