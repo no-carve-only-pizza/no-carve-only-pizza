@@ -1,32 +1,53 @@
-# Security disclosures — 2026-07
+# Security disclosures
 
-Public portfolio record. Only **published** advisories and **public** issues. CVE IDs are added when assigned. Evidence screenshots live under [`disclosures/screenshots/`](./disclosures/screenshots/).
+[← Profile](./README.md)
 
-## One-liners
+**10 CVE-assigned vulnerabilities:** nine in nfdump and one in justniffer.
+Each CVE link below opens the public maintainer advisory that lists the CVE ID and
+credits [Dohyun Park (@no-carve-only-pizza)](https://github.com/no-carve-only-pizza) as reporter.
 
-- Discovered and reported **nine** nfdump issues (5 remote IPFIX in `nfcapd` at CVSS 7.5; 4 local file-parser issues at CVSS 5.5); all published as GitHub Security Advisories.
-- Reported and published a justniffer / bundled-libnids IP-defrag heap over-read (CVSS 8.2, fixed in v0.6.14).
-- Also filed public memory-safety issues for softflowd (fixed upstream, commit `74c311f`) and tcpflow (still open).
+## CVE assignments
 
-## Published (credit live)
+| CVE | Project | Finding | CVSS 3.1 |
+|---|---|---|---|
+| [CVE-2026-102528](https://github.com/onotelli/justniffer/security/advisories/GHSA-3gvq-jf6c-94v8) | justniffer | IP fragment heap over-read | 8.2 |
+| [CVE-2026-94551](https://github.com/phaag/nfdump/security/advisories/GHSA-35rg-4vr7-fmr2) | nfdump / nfcapd | IPFIX template replacement use-after-free | 7.5 |
+| [CVE-2026-94552](https://github.com/phaag/nfdump/security/advisories/GHSA-9q9x-c3p9-pp6r) | nfdump / nfcapd | Options Template length overflow / SIGFPE | 7.5 |
+| [CVE-2026-94553](https://github.com/phaag/nfdump/security/advisories/GHSA-h97c-j4xh-mrwh) | nfdump / nfcapd | IPFIX withdraw-all use-after-free | 7.5 |
+| [CVE-2026-94554](https://github.com/phaag/nfdump/security/advisories/GHSA-4x68-h7hg-9gh4) | nfdump / nfcapd | Zero-size subTemplateMultiList CPU exhaustion | 7.5 |
+| [CVE-2026-94555](https://github.com/phaag/nfdump/security/advisories/GHSA-7rq7-vj35-pw96) | nfdump / nfcapd | Zero-length template CPU / disk exhaustion | 7.5 |
+| [CVE-2026-94556](https://github.com/phaag/nfdump/security/advisories/GHSA-5c4g-q9hx-6x4m) | nfdump | NBAR array out-of-bounds reads | 5.5 |
+| [CVE-2026-94557](https://github.com/phaag/nfdump/security/advisories/GHSA-qrg4-hf97-rg7g) | nfdump | Interface / VRF array heap out-of-bounds read | 5.5 |
+| [CVE-2026-94558](https://github.com/phaag/nfdump/security/advisories/GHSA-jfw9-v5p4-pxw2) | nfdump | Legacy v1 file-header stack out-of-bounds read | 5.5 |
+| [CVE-2026-94559](https://github.com/phaag/nfdump/security/advisories/GHSA-7vhp-748h-jjx6) | nfdump | Malformed appendix loop / log-flood denial of service | 5.5 |
 
-| ID | Product | Class | Link |
-|----|---------|-------|------|
-| GHSA-3gvq-jf6c-94v8 | justniffer | Heap over-read in undersized IP fragment handling (CWE-125), CVSS 8.2 | https://github.com/onotelli/justniffer/security/advisories/GHSA-3gvq-jf6c-94v8 |
-| GHSA-35rg-4vr7-fmr2 | nfdump/nfcapd | Remote Options Template replacement UAF (CWE-416), CVSS 7.5 | https://github.com/phaag/nfdump/security/advisories/GHSA-35rg-4vr7-fmr2 |
-| GHSA-h97c-j4xh-mrwh | nfdump/nfcapd | Remote withdraw-all UAF (CWE-416), CVSS 7.5 | https://github.com/phaag/nfdump/security/advisories/GHSA-h97c-j4xh-mrwh |
-| GHSA-9q9x-c3p9-pp6r | nfdump/nfcapd | Remote Options Template length wrap / SIGFPE (CWE-369), CVSS 7.5 | https://github.com/phaag/nfdump/security/advisories/GHSA-9q9x-c3p9-pp6r |
-| GHSA-4x68-h7hg-9gh4 | nfdump/nfcapd | Remote subTemplateMultiList zero-size CPU exhaustion (CWE-835), CVSS 7.5 | https://github.com/phaag/nfdump/security/advisories/GHSA-4x68-h7hg-9gh4 |
-| GHSA-7rq7-vj35-pw96 | nfdump/nfcapd | Remote zero-length template CPU/disk exhaustion (CWE-835), CVSS 7.5 | https://github.com/phaag/nfdump/security/advisories/GHSA-7rq7-vj35-pw96 |
-| GHSA-5c4g-q9hx-6x4m | nfdump | NBAR array OOB reads (`nfdump -r`, CWE-125), CVSS 5.5 | https://github.com/phaag/nfdump/security/advisories/GHSA-5c4g-q9hx-6x4m |
-| GHSA-qrg4-hf97-rg7g | nfdump | ifvrf array heap OOB read (`nfdump -r`, CWE-125), CVSS 5.5 | https://github.com/phaag/nfdump/security/advisories/GHSA-qrg4-hf97-rg7g |
-| GHSA-jfw9-v5p4-pxw2 | nfdump | Legacy v1 ident stack OOB read (CWE-125), CVSS 5.5 | https://github.com/phaag/nfdump/security/advisories/GHSA-jfw9-v5p4-pxw2 |
-| GHSA-7vhp-748h-jjx6 | nfdump | Appendix NumRecords log-flood DoS (CWE-835), CVSS 5.5 | https://github.com/phaag/nfdump/security/advisories/GHSA-7vhp-748h-jjx6 |
+The nfcapd findings demonstrate remote denial of service; the file-parser findings
+require a crafted file to be opened. Memory-safety classifications do not imply
+that code execution was demonstrated. Scores above are those published by the maintainers.
 
-Reporter credit: `no-carve-only-pizza` (accepted). CVE IDs: pending. nfdump fixes on master (v1.7.9 pending): NBAR/ifvrf `d744496`, appendix `0b0f40e`, v1 ident `7069cfc`. justniffer fixed in `>=0.6.14`.
+justniffer was fixed in [v0.6.14](https://github.com/onotelli/justniffer/releases/tag/v0.6.14).
+The nfdump advisories link the relevant fixes and version boundaries; see the
+[upstream releases](https://github.com/phaag/nfdump/releases) for released versions.
 
-### Newly published file-parser advisories
+## Additional public reports
 
+These reports are separate from the ten CVE assignments above.
+
+| Project | Report | Status |
+|---|---|---|
+| softflowd | [MPLS label-depth out-of-bounds read and flow-table corruption (#67)](https://github.com/irino/softflowd/issues/67) | Fixed upstream in [74c311f](https://github.com/irino/softflowd/commit/74c311f); issue closed |
+| tcpflow | [Crafted-pcap out-of-bounds reads (#277)](https://github.com/simsong/tcpflow/issues/277) | Open |
+
+## Evidence
+
+The screenshots below are the original reproduction and disclosure records.
+Their captured advisory metadata may predate the CVE assignments; the linked
+maintainer advisories above contain the current IDs.
+
+<details>
+<summary>nfdump and justniffer reproduction evidence</summary>
+
+### File-parser advisories
 #### GHSA-5c4g-q9hx-6x4m — NBAR array OOB
 
 ![Published advisory](disclosures/screenshots/ghsa-5c4g-nbar/00-ghsa-published.png)
@@ -77,14 +98,10 @@ Reporter credit: `no-carve-only-pizza` (accepted). CVE IDs: pending. nfdump fixe
 
 ![ASAN live veth](disclosures/screenshots/justniffer-19/01-asan-read-live-veth.png)
 
-## Public issues
+</details>
 
-| Project | Issue | Class | Status |
-|---------|-------|-------|--------|
-| softflowd | https://github.com/irino/softflowd/issues/67 | MPLS label-depth OOB read + flow-table corruption (CWE-125) | Fixed upstream in [`74c311f`](https://github.com/irino/softflowd/commit/74c311f), closed 2026-07-26 |
-| tcpflow | https://github.com/simsong/tcpflow/issues/277 | Crafted-pcap OOB reads (CWE-125), low/DoS | Open |
-
-### softflowd#67
+<details>
+<summary>softflowd report and patch verification</summary>
 
 Fixed upstream in commit [`74c311f`](https://github.com/irino/softflowd/commit/74c311f); maintainer closed the issue as completed on 2026-07-26. A duplicate report, [#66](https://github.com/irino/softflowd/issues/66), was closed as a duplicate of this issue the same day.
 
@@ -98,7 +115,10 @@ Fixed upstream in commit [`74c311f`](https://github.com/irino/softflowd/commit/7
 
 ![Duplicate check](disclosures/screenshots/softflowd-67/04-duplicate-check.png)
 
-### tcpflow#277
+</details>
+
+<details>
+<summary>tcpflow report and reproduction evidence</summary>
 
 ![GitHub issue](disclosures/screenshots/tcpflow-277/00-github-issue.png)
 
@@ -114,83 +134,6 @@ Fixed upstream in commit [`74c311f`](https://github.com/irino/softflowd/commit/7
 
 ![Duplicate check](disclosures/screenshots/tcpflow-277/06-duplicate-check.png)
 
-## Copy-paste blurb (KR) — 관련 경험
+</details>
 
-관련 경험  
-AFL++/ASAN·LLM으로 오픈소스 네트워크 파서 취약점을 찾아 GitHub Security Advisory로 제보·게재했습니다. (PoC·root cause·패치 제안·reporter credit)
-
-- nfdump/`nfcapd` 원격 IPFIX 5건 (UAF 2 · SIGFPE 1 · CPU/디스크 DoS 2, 각 CVSS 7.5)
-- nfdump 파일 파서 4건 (`nfdump -r`: NBAR/ifvrf OOB, v1 ident stack OOB, appendix log-flood; 각 CVSS 5.5)
-- justniffer IP fragment heap over-read (CVSS 8.2, fixed v0.6.14): GHSA-3gvq-jf6c-94v8
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+_Public advisory IDs, reporter credit, scores, and issue states checked on 2026-10-23._
